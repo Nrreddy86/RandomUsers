@@ -11,7 +11,6 @@ import kotlinx.coroutines.launch
 
 class UserViewModel(private val repository: UserRepository = UserRepository()) : ViewModel() {
 
-    //    private val repository = UserRepository()
     private val _usersState = MutableStateFlow<ApiResult<List<User>>>(ApiResult.Loading)
     val usersState: StateFlow<ApiResult<List<User>>> = _usersState
 
@@ -28,5 +27,11 @@ class UserViewModel(private val repository: UserRepository = UserRepository()) :
 
         }
     }
+
+
+    /*var number = mutableStateOf("")
+    fun updateNumber(newNumber: String) {
+        number.value = newNumber
+    }*/
 
 }
