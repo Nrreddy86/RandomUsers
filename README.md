@@ -6,12 +6,14 @@ This is an Android RandomUsers application built using Android Jetpack Compose. 
 
 Here is a screenshot of the app's main screen:
 
-![image](https://github.com/user-attachments/assets/f86706fa-4aa2-4029-a234-80a6932d2b52) ![image](https://github.com/user-attachments/assets/6afa0a63-33cf-476f-bcb2-5540bbb6d2ba)
+![image](https://github.com/Nrreddy86/RandomUsers/blob/main/images/Screenshot_20250108_233636.png)  
+![image](https://github.com/Nrreddy86/RandomUsers/blob/main/images/Screenshot_20250108_183153.png) 
+![image](https://github.com/Nrreddy86/RandomUsers/blob/main/images/Screenshot_20250108_183143.png)
 
 
 ## Features
 1) Search feature to search Users
-2) Click on any searched users then able to see employee complete details.
+2) Click on any searched users then able to see Users complete details.
 
 ## Prerequisites
 Before running the app, make sure you have the following:
@@ -21,7 +23,7 @@ Before running the app, make sure you have the following:
 
 
 # Getting Started
-1) Clone the repository: git clone (https://github.com/ymaheshn/EmployeeApp.git) make sure it should be a Master branch Or Download the Zip file
+1) Clone the repository: git clone (https://github.com/Nrreddy86/RandomUsers.git) make sure it should be a Master branch Or Download the Zip file
 2) Open the project in Android Studio.
 
 
