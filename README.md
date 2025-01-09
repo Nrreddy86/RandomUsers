@@ -1,6 +1,6 @@
 ## RandomUser App
 
-This is an Android RandomUsers application built using Android Jetpack Compose. The app follows the MVVM (Model-View-ViewModel) architecture and has a minimum supported Android version of Android 10.
+This is an Android RandomUsers application built using Android Jetpack Compose. The app follows the MVVM (Model-View-ViewModel) architecture with Hilt libary and has a minimum supported Android version of Android 10.
 
 ## Screenshots
 
@@ -34,6 +34,7 @@ The project uses the following dependencies:
 2) Coroutines: Provides asynchronous programming capabilities.
 3) ViewModel: Part of the Jetpack library that provides a lifecycle-aware container for UI-related data.
 4) Navigation: Handles navigation between different screens and features in the app.
+5) Hilt Library: Provided dependencies Injection(DI) by automatically providing objects where they are needed (in Activities, Fragments, ViewModels, etc.) and managing the lifecycle of these dependencies.
 
 For a complete list of dependencies, refer to the build.gradle file in the app module.
 
