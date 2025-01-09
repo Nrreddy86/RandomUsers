@@ -22,7 +22,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
@@ -44,7 +43,6 @@ fun MainScreen(
 ) {
 
     val usersState by userViewModel.usersState.collectAsState()
-//    var userCount by userViewModel.number
     var userCount by rememberSaveable { mutableStateOf("") } // Holds the input number
     val keyboardController = LocalSoftwareKeyboardController.current
 
@@ -66,7 +64,6 @@ fun MainScreen(
                 value = userCount,
                 onValueChange = {
                     userCount = it.filter { char -> char.isDigit() }
-//                    userViewModel.updateNumber(it)
                 },
                 label = { Text("Enter number of users") },
                 modifier = Modifier.fillMaxWidth(),

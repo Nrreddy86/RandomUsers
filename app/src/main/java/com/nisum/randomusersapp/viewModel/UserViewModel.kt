@@ -28,10 +28,4 @@ class UserViewModel(private val repository: UserRepository = UserRepository()) :
         }
     }
 
-
-    /*var number = mutableStateOf("")
-    fun updateNumber(newNumber: String) {
-        number.value = newNumber
-    }*/
-
 }
