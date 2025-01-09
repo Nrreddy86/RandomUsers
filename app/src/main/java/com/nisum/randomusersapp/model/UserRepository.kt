@@ -2,10 +2,12 @@ package com.nisum.randomusersapp.model
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class UserRepository {
+@Singleton
+class UserRepository @Inject constructor(private val apiServices: ApiServices){
 
-    private val apiServices = RetrofitClient().apiServices
     suspend fun fetchUsers(count: Int): ApiResult<List<User>> {
         return withContext(Dispatchers.IO) {
             try {

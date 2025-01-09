@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
 }
@@ -46,7 +47,7 @@ android {
     }
     packaging {
         resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1,LICENSE.md}"
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
 }
@@ -63,23 +64,23 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+    implementation(libs.androidx.navigation.compose) // Jetpack Compose navigation
     implementation(libs.logging.interceptor)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.espresso.core)
     implementation(libs.coil.compose)
-    implementation(libs.hilt.android)
-    implementation(libs.androidx.hilt.navigation.compose)
-    implementation(libs.hilt.android.testing)
-    kapt(libs.hilt.android.compiler)
+
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
 
     testImplementation(libs.junit)
     // MockK for Unit Testing
     testImplementation("io.mockk:mockk:1.13.5")
 
-// Coroutines Testing
+    // Coroutines Testing
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1")
 
-// LiveData & Architecture Component Testing
+    // LiveData & Architecture Component Testing
     testImplementation("androidx.arch.core:core-testing:2.1.0")
 
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1")
@@ -91,4 +92,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }

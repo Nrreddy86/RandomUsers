@@ -9,7 +9,9 @@ import com.nisum.randomusersapp.ui.theme.RandomUsersAppTheme
 import com.nisum.randomusersapp.view.MainContent
 import com.nisum.randomusersapp.viewModel.SharedViewModel
 import com.nisum.randomusersapp.viewModel.UserViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

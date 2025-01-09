@@ -15,16 +15,12 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-//    @Provides
-//    fun provideRetrofitClient(): RetrofitClient {
-//        return RetrofitClient()
-//    }
+    @Provides
+    fun provideApiServices(): ApiServices {
+        return RetrofitClient().apiServices
 
-//    @Provides
-//    fun provideApiServices(): ApiServices {
-//        return RetrofitClient().apiServices
-//
-//    }
+    }
+
 }
 
 //    @Module
